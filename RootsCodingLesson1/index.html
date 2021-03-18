@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All About Claudia</title>
+<script type="text/javascript">
+function isPrime() {
+	// alert("Hello World!")
+
+	/* Prime number can only be divisible by 1 and itself
+	/ p = {2, 3, 5, 7, 11...... 101}
+	/ !p = {4, 6, 9, 15, ... 225}
+	
+	/ x = 49
+	/ let i be a possible divisor, starting from 2
+	/ you check 2, 2 + 1, 2 + 2....., x - 1
+	*/ 
+
+	var x = 13;
+	var prime = true;
+
+	// 8
+	// factors = 1, 2, Sqrt(8), 4, 8
+
+	// 25
+
+	// 2
+
+	//13
+
+	// 1, 2, 3, 3.xxxx 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+
+	// 67
+
+	//  
+
+	for(var i = 2; i < x; i++) {
+		if (x % i == 0) {
+			prime = false;
+			break;
+		}
+
+		else {
+			continue;
+		}
+	}
+
+	alert(x + " is prime: " + prime);
+}
+
+function greatestPrime() {
+	var t0 = performance.now();
+	var x = 1000000000;
+	for (var i = x; i >= 1; i--) {
+		if (isPrime(i)) {
+			var t1 = performance.now()
+
+			alert(i + "\nCall took " + (t1 - t0) + "milliseconds");
+			break;
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+<h1>Hello World! This is Claudia's first webpage!</h1>
+<h2>My Hobbies</h2>
+<ul type="A">
+<li>Reading</li>
+<li>Talking to Friends</li>
+<li>Making Jewelry</li>
+<li>Watching Movies</li>
+<li>Playing Instruments</li>
+<ul>
+<ul type="i">
+	<li>Piano
+	<li>Guitar
+	<li>Ukulele
+	<li>Flute
+</ul>
+<hr>
+<b>My Favorite Website:</b> <a href="https://www.dearasianyouth.org/home">Dear Asian Youth</a>
+<br>
+<i>My Favorite Pokemon:</i>
+<img src="pokemon.png" />
+<br>
+<u>My Social Media</u>
+<br>
+<a href="https://www.instagram.com/claudia_shin" target="_blank"><img src="instagram.png" /></a>&nbsp;&nbsp;
+<a href="https://www.tiktok.com/@claudia_shin?lang=en" target="_blank"><img src="tiktok.png" /></a>&nbsp;&nbsp;
+<br>
+<br>
+<table border="1">
+<tr>
+	<th>Me</th>
+	<th>Mom</th>
+	<th>Dad</th>
+	<th>Siblings</th>
+</tr>
+<td><img src="claudia.jpg" />
+<td><img src="FamilyPic.jpg" />
+<td>6</td>
+	<td>7</td>
+</td>
+<tr>
+	<td rowspan="2">My Crush</td>
+	<td colespan="3">Matthew Gray Gubler</td>
+</tr>
+<tr>
+	<td colspan="3">
+		<img src="mgg.jfif" />
+	</td>
+</tr>
+</table>
+<br>
+<button onclick="isPrime()">Check Prime</button>
+</body>
+</html> 
